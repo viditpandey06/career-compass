@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from './ui/carousel';
 import { Button } from './ui/button';
@@ -27,11 +26,9 @@ const CategoryCarousel = () => {
             <Carousel className="w-full max-w-xl mx-auto my-20">
                 <CarouselContent>
                     {
-                        // eslint-disable-next-line no-unused-vars
-                        category.map((cat,key={}) => (
-                            // eslint-disable-next-line react/jsx-key
+                        category.map((cat, index) => (
                             <CarouselItem className="md:basis-1/2 lg-basis-1/3">
-                                <Button onClick={()=>searchJobHandler(cat)} variant="outline" className="rounded-full  bg-violet-400">{cat}</Button>
+                                <Button onClick={()=>searchJobHandler(cat)} variant="outline" className="rounded-full">{cat}</Button>
                             </CarouselItem>
                         ))
                     }
